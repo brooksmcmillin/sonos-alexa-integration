@@ -127,7 +127,7 @@ function setVolumeInSession(intent, session, callback) {
     var sessionAttributes = {};
     var shouldEndSession = false;
     var speechOutput = "Done.";
-    
+
     if(session.attributes)
     {
         volumeLevel = session.attributes.volumeLevel;
@@ -135,7 +135,7 @@ function setVolumeInSession(intent, session, callback) {
 
     if (volumeChange) {
         var vChange = volumeChange.value;
-        
+
         switch(vChange)
         {
             case "up":
@@ -154,7 +154,7 @@ function setVolumeInSession(intent, session, callback) {
         speechOutput = "Certainly.";
         sessionAttributes = createVolumeAttribute(volumeLevel);
         speechOutput = "Done.";
-        
+
     } else {
         speechOutput = "I'm not sure";
         repromptText = "I'm not sure";
@@ -164,31 +164,31 @@ function setVolumeInSession(intent, session, callback) {
          buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 }
 
-function createFavoriteColorAttributes(favoriteColor) {
+function createVolumeAttribute(volumeLevel) {
     return {
-        favoriteColor: favoriteColor
+        volumeLevel: volumeLevel
     };
 }
 
 function getVolumeFromSession(intent, session, callback) {
-	 
+
     var volumeLevel;
     var repromptText = null;
     var sessionAttributes = {};
     var shouldEndSession = false;
     var speechOutput = "";
-	
+
 	 if (session.attributes) {
         volumeLevel = session.attributes.volumeLevel;
     }
-	
+
     if (volumeLevel) {
         speechOutput = "Your volume level is " + volumeLevel + ". Goodbye.";
         shouldEndSession = true;
     } else {
         speechOutput = "I'm not sure";
     }
-	
+
     // Setting repromptText to null signifies that we do not want to reprompt the user.
     // If the user does not respond or says something that is not understood, the session
     // will end.
@@ -225,7 +225,7 @@ function buildResponse(sessionAttributes, speechletResponse) {
         sessionAttributes: sessionAttributes,
         response: speechletResponse
     };
-    
+
 /*function sendVolume(volume)
 {
 	data = {"volume": volume}
