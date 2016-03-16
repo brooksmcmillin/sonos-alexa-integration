@@ -9,6 +9,8 @@
 
 // Route the incoming request based on type (LaunchRequest, IntentRequest,
 // etc.) The JSON body of the request is provided in the event parameter.
+var https = require('https');
+
 exports.handler = function (event, context) {
     try {
         console.log("event.session.application.applicationId=" + event.session.application.applicationId);
@@ -198,11 +200,34 @@ function getVolumeFromSession(intent, session, callback) {
 }
 
 function sendVolume(volume) {
-  var xhttp = new XMLHttpRequest();
-	var parameters = "volume=" + volume;
+
+  var postheaders = { 'Content-Type' : 'application/json' };
+  var parameters = "volume=" + volume;
+
+  var options = {
+    hostname: "http://brooksmcmillin.com:8081/weareconcerts/index.php?volume="+volume,
+    port: 443,
+    path: '/test',
+    method: 'POST',
+    headers: postheaders
+  };
+
+  var reqPost = https.request(options, function (res) {
+    var body = '';
+    res.setEncoding('utf8');
+
+    res.on('end', function() {
+      console.log("successfully sent vol "+volume);
+
+      
+    })
+  })
+
+  /*var xhttp = new XMLHttpRequest();
 	xhttp.open("GET",
 		"http://brooksmcmillin.com:8081/weareconcerts/index.php?volume="+volume, true);
-	xhttp.send();
+	xhttp.send();*/
+
 }
 
 
