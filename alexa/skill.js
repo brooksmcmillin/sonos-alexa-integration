@@ -199,6 +199,8 @@ function getVolumeFromSession(intent, session, callback) {
          buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
 }
 
+
+/*
 function sendVolume(volume) {
 
   var postheaders = { 'Content-Type' : 'application/json' };
@@ -224,13 +226,8 @@ function sendVolume(volume) {
     })
   })
 
-  /*var xhttp = new XMLHttpRequest();
-	xhttp.open("GET",
-		"http://brooksmcmillin.com:8081/weareconcerts/index.php?volume="+volume, true);
-	xhttp.send();*/
-
 }
-
+*/
 
 // --------------- Helpers that build all of the responses -----------------------
 
