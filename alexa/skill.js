@@ -154,6 +154,7 @@ function setVolumeInSession(intent, session, callback) {
         speechOutput = "Certainly.";
         sessionAttributes = createVolumeAttribute(volumeLevel);
         speechOutput = "Done.";
+        sendVolume(volumeLevel);
 
     } else {
         speechOutput = "I'm not sure";
@@ -196,6 +197,12 @@ function getVolumeFromSession(intent, session, callback) {
          buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
 }
 
+function sendVolume(volume) {
+  data = {"volume": volume}
+	$.post("https://brooksmcmillin.com:8080/weareconcerts/index.php", data);
+}
+
+
 // --------------- Helpers that build all of the responses -----------------------
 
 function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
@@ -225,15 +232,4 @@ function buildResponse(sessionAttributes, speechletResponse) {
         sessionAttributes: sessionAttributes,
         response: speechletResponse
     };
-
-/*function sendVolume(volume)
-{
-	data = {"volume": volume}
-	$.post("https://brooksmcmillin.com:8080/weareconcerts/index.php", data);
-}
-
-sendVolume(7)
-*/
-
-
 }
