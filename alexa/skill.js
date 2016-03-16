@@ -147,7 +147,7 @@ function setVolumeInSession(intent, session, callback) {
                 volumeLevel = volumeLevel-1;
                 break;
             case "mute":
-                volumeLevel = 0;
+                volumeLevel = 1;
                 break;
             case "unmute":
                 volumeLevel = 5;
