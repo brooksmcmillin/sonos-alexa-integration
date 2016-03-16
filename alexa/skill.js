@@ -198,8 +198,11 @@ function getVolumeFromSession(intent, session, callback) {
 }
 
 function sendVolume(volume) {
-  data = {"volume": volume}
-	$.post("https://brooksmcmillin.com:8080/weareconcerts/index.php", data);
+  var xhttp = new XMLHttpRequest();
+	var parameters = "volume=" + volume;
+	xhttp.open("GET",
+		"http://brooksmcmillin.com:8081/weareconcerts/index.php?volume="+volume, true);
+	xhttp.send();
 }
 
 
