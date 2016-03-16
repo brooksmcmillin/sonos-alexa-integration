@@ -156,15 +156,15 @@ function setVolumeInSession(intent, session, callback) {
         speechOutput = "Certainly.";
         sessionAttributes = createVolumeAttribute(volumeLevel);
         speechOutput = "Done.";
-        sendVolume(volumeLevel);
+        //sendVolume(volumeLevel);
 
     } else {
         speechOutput = "I'm not sure";
         repromptText = "I'm not sure";
     }
 
-    //callback(sessionAttributes,
-    //     buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+    callback(sessionAttributes,
+         buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 }
 
 function createVolumeAttribute(volumeLevel) {
