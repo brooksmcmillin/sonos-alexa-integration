@@ -163,8 +163,8 @@ function setVolumeInSession(intent, session, callback) {
         repromptText = "I'm not sure";
     }
 
-    callback(sessionAttributes,
-         buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+    //callback(sessionAttributes,
+    //     buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 }
 
 function createVolumeAttribute(volumeLevel) {
@@ -219,7 +219,8 @@ function sendVolume(volume) {
     res.on('end', function() {
       console.log("successfully sent vol "+volume);
 
-      
+      callback(sessionAttributes,
+           buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
     })
   })
 
