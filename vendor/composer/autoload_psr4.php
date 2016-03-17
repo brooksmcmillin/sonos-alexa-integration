@@ -13,4 +13,5 @@ return array(
     'React\\Socket\\' => array($vendorDir . '/react/socket/src'),
     'React\\EventLoop\\' => array($vendorDir . '/react/event-loop/src'),
     'Ratchet\\' => array($vendorDir . '/cboden/ratchet/src/Ratchet'),
+    'Alexa\\' => array($vendorDir . '/minicodemonkey/amazon-alexa-php/src'),
 );

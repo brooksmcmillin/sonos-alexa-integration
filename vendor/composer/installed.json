@@ -638,5 +638,46 @@
             "server",
             "sockets"
         ]
+    },
+    {
+        "name": "minicodemonkey/amazon-alexa-php",
+        "version": "0.1.5",
+        "version_normalized": "0.1.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/MiniCodeMonkey/amazon-alexa-php.git",
+            "reference": "006a1e1e775d8429574cde1a093a8b9a4da6a960"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/MiniCodeMonkey/amazon-alexa-php/zipball/006a1e1e775d8429574cde1a093a8b9a4da6a960",
+            "reference": "006a1e1e775d8429574cde1a093a8b9a4da6a960",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.6"
+        },
+        "time": "2015-11-29 21:50:59",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Alexa\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mathias Hansen",
+                "email": "me@codemonkey.io"
+            }
+        ],
+        "description": "Amazon Alexa interface for PHP"
     }
 ]

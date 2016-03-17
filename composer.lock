@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f9db4cd455bf86551f3dc9bca1d4d5e3",
-    "content-hash": "1976a9ca993ca57a762b4739a66047f7",
+    "hash": "3bd867402a46f05312af43197bf4c4d6",
+    "content-hash": "7436c21dc004798f1e95f60fbf1063e6",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -302,6 +302,45 @@
             ],
             "abandoned": "guzzle/guzzle",
             "time": "2014-05-01 21:36:02"
+        },
+        {
+            "name": "minicodemonkey/amazon-alexa-php",
+            "version": "0.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MiniCodeMonkey/amazon-alexa-php.git",
+                "reference": "006a1e1e775d8429574cde1a093a8b9a4da6a960"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MiniCodeMonkey/amazon-alexa-php/zipball/006a1e1e775d8429574cde1a093a8b9a4da6a960",
+                "reference": "006a1e1e775d8429574cde1a093a8b9a4da6a960",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Alexa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mathias Hansen",
+                    "email": "me@codemonkey.io"
+                }
+            ],
+            "description": "Amazon Alexa interface for PHP",
+            "time": "2015-11-29 21:50:59"
         },
         {
             "name": "react/event-loop",
