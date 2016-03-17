@@ -1,0 +1,13 @@
+
+<script src="js/jquery.min.js"></script>
+<script>
+
+function sendVolume(volume)
+{
+	data = {"volume": volume}
+	$.post("https://brooksmcmillin.com:8080/weareconcerts/index.php", data);
+}
+
+sendVolume(7)
+
+</script>
