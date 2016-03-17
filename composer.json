@@ -1,6 +1,7 @@
 {
     "require": {
         "cboden/ratchet": "^0.3.4",
-        "minicodemonkey/amazon-alexa-php": "^0.1.5"
+        "minicodemonkey/amazon-alexa-php": "^0.1.5",
+        "textalk/websocket": "^1.2"
     }
 }

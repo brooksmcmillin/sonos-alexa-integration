@@ -1,9 +1,12 @@
 <?php
 	
-	$volumeLevel = $_POST["volume"];
+	require_once __DIR__ . "/vendor/autoload.php";
+	
+	$volumeLevel = $_GET["volume"];
 	
 	echo '{ "data": "The Volume is ' . $volumeLevel . '!"}';
 	
+
 	$file = 'log.txt';
 	// Open the file to get existing content
 	$current = file_get_contents($file);
